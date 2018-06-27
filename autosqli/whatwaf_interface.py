@@ -22,7 +22,7 @@ def whatwaf_url(url):
     """ return WhatWaf's results for a specified url """
     log.debug("Launching WhatWaf on {}".format(url))
     return execute([
-        "python2.7", whatwaf_path + 'whatwaf.py', "-u",
+        "python", whatwaf_path + 'whatwaf.py', "-u",
         url, "--ra", "--hide", "--json",
         "--verify-num",
         str(WHATWAF_VERIFY_NUM)
